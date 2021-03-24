@@ -1,0 +1,8 @@
+class Paper{
+    constructor(){
+
+    }
+    display(){
+        
+    }
+}
