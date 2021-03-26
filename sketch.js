@@ -11,14 +11,14 @@ function setup() {
 	createCanvas(1600, 700);
 	rectMode(CENTER);
    
-
-
 	engine = Engine.create();
 	world = engine.world;
 
 	paper = new Paper(50,50);
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,560);
+
+	console.log(dustbinObj);
    
 
 	Engine.run(engine);
@@ -32,10 +32,11 @@ function draw() {
   paper.display();
   dustbinObj.display();
 
+  
 }
 function keyPressed(){
 	if(keyCode = 40){
-	   Matter.Body.applyForce(paper,20,5);
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:150,y:-200});
 	}   
 }
 

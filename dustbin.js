@@ -3,7 +3,8 @@ class dustbin
 	constructor(x,y)
 	{
 		var options = {
-		isStatic:true	
+		isStatic:true,
+		density: 0	
 		}
 	    this.body = Bodies.rectangle(x,y,50,200,options)
 		this.width = 150;
