@@ -14,11 +14,12 @@ class Paper{
     display(){
         
         var pos = this.body.position;
-        
+        push();
         fill("red");
-        //translate(pos.x, pos.y);
+        translate(pos.x, pos.y);
         imageMode(CENTER);
-        image(this.image, pos.x, pos.y, this.width, this.height);
+        image(this.image, 0, 0, this.width, this.height);
+        pop();
 
     }
 }
